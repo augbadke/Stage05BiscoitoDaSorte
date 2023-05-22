@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-title: 'Montserrat', sans-serif;
+  --ff-text: 'DM Sans', sans-serif;
+  --ff-text-cookie: 'Dancing Script', cursive;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+  background-size: 200% 200%;
+  animation: changecolor 10s ease infinite;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.Screen1 {
+  background: white;
+  width: 30rem;
+  box-shadow: 0px 2rem 5rem 0 hsla(0, 0%, 0%, 0.8);
+  padding: 4.8rem 6.4rem;
+  border-radius: .5rem;
+
+  text-align: center;
+  margin: auto;
+  box-sizing: content-box;
+}
+
+.Screen2 {
+  background: white;
+  width: 30rem;
+  box-shadow: 0px 2rem 5rem 0 hsla(0, 0%, 0%, 0.8);
+  padding: 4.8rem 6.4rem;
+  border-radius: .5rem;
+
+  text-align: center;
+  margin: auto;
+  box-sizing: content-box;
+}
+
+.hide {
+  display: none;
+}
+
+h1,h2 {
+  font-family: var(--ff-title);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.9rem;
+  color: hsla(238, 27%, 28%, 1);
+
+  margin-bottom: 1.5rem;
+}
+
+
+.Screen1 p {
+  font-family: var(--ff-text);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: hsla(238, 27%, 28%, 1);
+
+  margin-bottom: 2rem;
+}
+
+.Screen1 button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Screen1 img:hover {
+  animation: shake 700ms infinite;
+}
+
+.Screen2 p {
+  font-family: var(--ff-text-cookie);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 2.9rem;
+
+  margin-bottom: 6rem;
+
+  width: 100%;
+  background: hsla(198, 32%, 92%, 1);
+  padding: 0.5rem;
+  box-shadow: .2rem .2rem .2rem 0 hsla(0, 0%, 33%, 0.5);
+  animation: downtop 800ms ease-in-out 100ms backwards;
+}
+
+.Screen2 button {
+  border: none;
+  background: hsla(35, 100%, 50%, 1);
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  margin-top: 6rem;
+
+  font-family: var(--ff-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  color: white;
+  transition: background-color 100ms;
+}
+
+.Screen2 button:hover {
+  background-color: rgb(214, 125, 0);
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-2px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-2px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    transform: translateY(15.5rem) scale(0.05);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes changecolor {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
